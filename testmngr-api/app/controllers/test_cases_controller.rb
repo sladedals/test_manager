@@ -46,6 +46,8 @@ class TestCasesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def test_case_params
-      params.require(:test_case).permit(:title, :status_id)
+      #params.require(:test_case).permit(:title, :status_id)
+      res = ActiveModelSerializers::Deserialization.jsonapi_parse(params)
+      res
     end
 end

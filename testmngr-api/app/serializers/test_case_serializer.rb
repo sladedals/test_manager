@@ -1,3 +1,4 @@
 class TestCaseSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :title
+  belongs_to :status
 end

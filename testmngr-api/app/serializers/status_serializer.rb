@@ -1,3 +1,4 @@
 class StatusSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :name
+  has_many :test_cases
 end

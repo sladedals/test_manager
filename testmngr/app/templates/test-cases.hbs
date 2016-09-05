@@ -1,1 +1,7 @@
-{{outlet}}
+<ul>
+  {{#each model as |item|}}
+    {{test-dsp item=item}}
+  {{/each}}
+</ul>
+
+<button {{route-action 'createTest'}}>Create!</button>

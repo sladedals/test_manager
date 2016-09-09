@@ -1,6 +1,5 @@
-<form>
-  {{input value=model.name placeholder="test name" class="form-control"}}
-
-  <button type="submit" class="btn btn-default" {{action "createTest"}}>create Test</button>
+<form {{action "createTest" this on="submit"}}>
+  {{input type="text" value=title}}
+  <button type="submit" class="btn btn-default">create Test</button>
 
 </form>
